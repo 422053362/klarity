@@ -1,0 +1,44 @@
+version: '3'
+services:
+  klarity-mysql:
+    build:
+      context: ./
+      dockerfile: meta/mysql/Dockerfile
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    restart: always
+    container_name: klarity-mysql
+    image: klarity-mysql
+    ports:
+      - 3306:3306
+    command: --lower_case_table_names=1
+  klarity-redis:
+    build:
+      context: ./
+      dockerfile: meta/redis/Dockerfile
+    restart: always
+    container_name: klarity-redis
+    image: klarity-redis
+    ports:
+      - 6379:6379
+  klarity-api:
+    build:
+      context: ./
+      dockerfile: ./assembly/klarity-deploy/Dockerfile
+    restart: always
+    container_name: klarity-api
+    image: klarity-api
+    ports:
+      - 8082:8082
+    environment:
+      REDIS_SERVER: klarity-redis
+      REDIS_PORT: 6379
+      REDIS_DATABASE: 0
+      REDIS_PASSWORD: foobared
+      MYSQL_SERVER: klarity-mysql
+    depends_on:
+      - klarity-redis
+      - klarity-mysql
+    links:
+      - "klarity-redis"
+      - "klarity-mysql"

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/klarity.iml" filepath="$PROJECT_DIR$/klarity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/main/biz/klarity-biz-schedule/klarity-biz-schedule.iml" filepath="$PROJECT_DIR$/main/biz/klarity-biz-schedule/klarity-biz-schedule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/main/biz/klarity-biz-service/klarity-biz-service.iml" filepath="$PROJECT_DIR$/main/biz/klarity-biz-service/klarity-biz-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/main/biz/klarity-biz-service-impl/klarity-biz-service-impl.iml" filepath="$PROJECT_DIR$/main/biz/klarity-biz-service-impl/klarity-biz-service-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/main/common/klarity-common-dal/klarity-common-dal.iml" filepath="$PROJECT_DIR$/main/common/klarity-common-dal/klarity-common-dal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/main/common/klarity-common-facade/klarity-common-facade.iml" filepath="$PROJECT_DIR$/main/common/klarity-common-facade/klarity-common-facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/main/common/klarity-common-integration/klarity-common-integration.iml" filepath="$PROJECT_DIR$/main/common/klarity-common-integration/klarity-common-integration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/main/common/klarity-common-util/klarity-common-util.iml" filepath="$PROJECT_DIR$/main/common/klarity-common-util/klarity-common-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/main/core/klarity-core-service/klarity-core-service.iml" filepath="$PROJECT_DIR$/main/core/klarity-core-service/klarity-core-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/main/core/klarity-core-service-impl/klarity-core-service-impl.iml" filepath="$PROJECT_DIR$/main/core/klarity-core-service-impl/klarity-core-service-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/assembly/klarity-deploy/klarity-deploy.iml" filepath="$PROJECT_DIR$/assembly/klarity-deploy/klarity-deploy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/main/facade/klarity-facade-impl/klarity-facade-impl.iml" filepath="$PROJECT_DIR$/main/facade/klarity-facade-impl/klarity-facade-impl.iml" />
+    </modules>
+  </component>
+</project>

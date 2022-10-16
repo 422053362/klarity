@@ -1,0 +1,68 @@
+##服务器配置
+server:
+  port: 8082
+  servlet:
+    context-path: /
+##数据库配置
+spring:
+  application:
+    name: klarity-server
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:h2
+    username: root
+    password: example
+    schema: classpath:db/klarity-schema.sql
+    data: classpath:db/klarity-data.sql
+  ## 缓存配置
+  redis:
+    database: ''
+    host: 127.0.0.1
+    password: ABCabc123456
+    port: 6379
+    timeout: 3s
+##数据访问层配置
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-not-delete-value: ''
+  mapper-locations:
+    classpath: mapper/*Mapper.xml
+  type-aliases-package: com.royee.vpn.common.dal.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  default-tenant-id: system
+##定时调度
+xxl:
+  job:
+    admin:
+      addresses: http://127.0.0.1:9090/xxl-job-admin
+    executor:
+      logpath: /usr/local/tomcat/logs
+      logretentiondays: 5
+      appname: ${spring.application.name}
+##事务模版和代码模版
+royee:
+  distribute:
+    transaction:
+      enable: true
+  template:
+    log:
+      level: info
+      root: .
+      appName: royee-server-application
+      profilerFacadeTime: 1
+##缓存框架配置
+redisson:
+  address: redis://127.0.0.1:6379
+  password: ABCabc123456
+##阿里云配置
+aliyun:
+  oss:
+    endpoint: https://oss-cn-hangzhou.aliyuncs.com
+    innerEndpoint: https://oss-cn-hangzhou.aliyuncs.com
+    accessKeyId: LTAI4GHMQztZhkGsE8H34HEC
+    accessKeySecret: KKbc4TkM3jjfcTc1SOwqOXXcRQCOd7
+    bucketName: royee-test
+    bucketUrl: https://royee.oss-cn-hangzhou.aliyuncs.com
+    bigMessageQueueBucketName: royee-big-message-queue

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.royee.utils:sequence-utils:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/royee/utils/sequence-utils/1.0.0-SNAPSHOT/sequence-utils-1.0.0-20221016.150409-7.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/royee/utils/sequence-utils/1.0.0-SNAPSHOT/sequence-utils-1.0.0-20221016.150409-7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/royee/utils/sequence-utils/1.0.0-SNAPSHOT/sequence-utils-1.0.0-20221016.150409-7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
