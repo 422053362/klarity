@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "18a6c7a8-0387-45fa-87be-2718df65f98a",
+		"name": "klarity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "注册一个医院",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "ls-nonce",
+						"value": "{{$guid}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"hospitalName\":\"杭州市第一人民医院\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8082/hospital/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"hospital",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "医院列表",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8082/hospital/query",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"hospital",
+						"query"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "注册一个员工到指定的医院",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "ls-nonce",
+						"value": "{{$guid}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"employeeName\":\"刘医生\",\n    \"email\":\"liu@qq.com\",\n    \"hospitalId\":\"10000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8082/employee/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"employee",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询一个医院中全部员工",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "ls-nonce",
+						"value": "13",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8082/employee/query?hospitalId=10000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"employee",
+						"query"
+					],
+					"query": [
+						{
+							"key": "hospitalId",
+							"value": "10000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "创建一个任务",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "ls-nonce",
+						"value": "{{$guid}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"测试任务1\",\n    \"ownerId\":\"10001\",\n    \"hospitalId\":\"10000\",\n    \"description\":\"测试任务的描述\",\n    \"priority\":\"urgent\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8082/task/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"task",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新一个任务",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "ls-nonce",
+						"value": "{{$guid}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"taskId\":\"10002\",\n    \"title\":\"测试任务10002\",\n    \"description\":\"测试任务的描述10002\",\n    \"priority\":\"low\",\n    \"status\":\"failed\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8082/task/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"task",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "任务重新分配给另一个员工",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "ls-nonce",
+						"value": "{{$guid}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"taskId\":\"10007\",\n    \"employeeId\":\"10006\",\n    \"hospitalId\":\"10004\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8082/task/reassign",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"task",
+						"reassign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询一个员工的全部任务",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "ls-nonce",
+						"value": "13",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8082/task/query/by/employee?employeeId=10001",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"task",
+						"query",
+						"by",
+						"employee"
+					],
+					"query": [
+						{
+							"key": "employeeId",
+							"value": "10001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询一个医院的全部任务",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "ls-nonce",
+						"value": "13",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8082/task/query/by/hospital?hospitalId=10000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"task",
+						"query",
+						"by",
+						"hospital"
+					],
+					"query": [
+						{
+							"key": "hospitalId",
+							"value": "10000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
