@@ -61,8 +61,8 @@ aliyun:
   oss:
     endpoint: https://oss-cn-hangzhou.aliyuncs.com
     innerEndpoint: https://oss-cn-hangzhou.aliyuncs.com
-    accessKeyId: LTAI4G
-    accessKeySecret: KKbc
+    accessKeyId: LTAI4GHMQztZhkGsE8H34HEC
+    accessKeySecret: KKbc4TkM3jjfcTc1SOwqOXXcRQCOd7
     bucketName: royee-test
     bucketUrl: https://royee.oss-cn-hangzhou.aliyuncs.com
     bigMessageQueueBucketName: royee-big-message-queue
