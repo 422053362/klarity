@@ -72,7 +72,7 @@ public class EmployeeManageBizServiceImpl implements EmployeeManageBizService {
                     employeeContextRepository.persistEmployeeCreateContext(context);
                 });
                 EmployeeEntity employeeEntity = context.getEmployeeEntity();
-                employeeVO = EmployeeEntityConverter.convert2HospitalVO(employeeEntity);
+                employeeVO = EmployeeEntityConverter.convert2EmployeeVO(employeeEntity);
             }
         } catch (Throwable throwable) {
             throwable.printStackTrace();
@@ -100,7 +100,7 @@ public class EmployeeManageBizServiceImpl implements EmployeeManageBizService {
         for (M2mHospitalEmployeeEntity entity : list) {
             String employeeId = entity.getEmployeeId();
             EmployeeEntity employeeEntity = this.employeeDaoService.getEmployeeByEmployeeId(employeeId);
-            EmployeeVO employeeVO = EmployeeEntityConverter.convert2HospitalVO(employeeEntity);
+            EmployeeVO employeeVO = EmployeeEntityConverter.convert2EmployeeVO(employeeEntity);
             employeeVOMap.put(employeeEntity.getEmployeeId(), employeeVO);
         }
         return page.convert(m2mHospitalEmployeeEntity -> {
