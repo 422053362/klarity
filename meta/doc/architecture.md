@@ -1,6 +1,6 @@
 ### System Architecture
 
-#### 1、module architecture
+#### 1、module design
 
 ```
 klarity-common-facade :

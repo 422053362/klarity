@@ -34,7 +34,7 @@ CREATE TABLE `tbl_klarity_employee`
     `modify_time`        datetime(3) NOT NULL COMMENT '修改时间',
     PRIMARY KEY (`id`),
     unique KEY (`employee_id`,`deleted`),
-    unique KEY (`email`,`deleted`)
+    unique KEY (`email`,`tenant_id`,`deleted`)
 ) COMMENT '员工信息表';
 
 DROP TABLE IF EXISTS `tbl_klarity_m2m_hospital_employee`;

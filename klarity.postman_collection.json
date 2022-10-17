@@ -67,7 +67,7 @@
 			"response": []
 		},
 		{
-			"name": "注册一个员工到指定的医院",
+			"name": "注册一个员工（10001）到指定的医院",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -105,7 +105,7 @@
 			"response": []
 		},
 		{
-			"name": "查询一个医院中全部员工",
+			"name": "查询一个医院中全部员工（1人）",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -140,7 +140,7 @@
 			"response": []
 		},
 		{
-			"name": "创建一个任务",
+			"name": "创建一个任务（任务Id10002）",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -178,7 +178,7 @@
 			"response": []
 		},
 		{
-			"name": "更新一个任务",
+			"name": "更新一个任务（10002）",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -216,45 +216,7 @@
 			"response": []
 		},
 		{
-			"name": "任务重新分配给另一个员工",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "ls-nonce",
-						"value": "{{$guid}}",
-						"type": "default"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"taskId\":\"10007\",\n    \"employeeId\":\"10006\",\n    \"hospitalId\":\"10004\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://127.0.0.1:8082/task/reassign",
-					"protocol": "http",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8082",
-					"path": [
-						"task",
-						"reassign"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "查询一个员工的全部任务",
+			"name": "查询一个员工（10001）的全部任务",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -291,7 +253,7 @@
 			"response": []
 		},
 		{
-			"name": "查询一个医院的全部任务",
+			"name": "查询一个医院（10000）的全部任务",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -321,6 +283,228 @@
 						{
 							"key": "hospitalId",
 							"value": "10000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "注册一个员工（10003）新的到指定的医院",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "ls-nonce",
+						"value": "{{$guid}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"employeeName\":\"刘医生01\",\n    \"email\":\"liu01@qq.com\",\n    \"hospitalId\":\"10000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8082/employee/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"employee",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询一个医院中全部员工（2人）",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "ls-nonce",
+						"value": "13",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8082/employee/query?hospitalId=10000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"employee",
+						"query"
+					],
+					"query": [
+						{
+							"key": "hospitalId",
+							"value": "10000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "任务（10002）重新分配给另一个员工（10003）",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "ls-nonce",
+						"value": "{{$guid}}",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"taskId\":\"10002\",\n    \"employeeId\":\"10003\",\n    \"hospitalId\":\"10000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8082/task/reassign",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"task",
+						"reassign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询一个医院（10000）的全部任务",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "ls-nonce",
+						"value": "13",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8082/task/query/by/hospital?hospitalId=10000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"task",
+						"query",
+						"by",
+						"hospital"
+					],
+					"query": [
+						{
+							"key": "hospitalId",
+							"value": "10000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询一个员工（10001）的全部任务",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "ls-nonce",
+						"value": "13",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8082/task/query/by/employee?employeeId=10001",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"task",
+						"query",
+						"by",
+						"employee"
+					],
+					"query": [
+						{
+							"key": "employeeId",
+							"value": "10001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查询一个员工（10003）的全部任务",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "ls-nonce",
+						"value": "13",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8082/task/query/by/employee?employeeId=10003",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"task",
+						"query",
+						"by",
+						"employee"
+					],
+					"query": [
+						{
+							"key": "employeeId",
+							"value": "10003"
 						}
 					]
 				}

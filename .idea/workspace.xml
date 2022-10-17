@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8c57f9a4-f028-433d-ba82-85e192ca8cc7" name="Changes" comment="init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta/mysql/klarity.sql" beforeDir="false" afterPath="$PROJECT_DIR$/meta/mysql/klarity.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta/video/系统架构介绍.mov" beforeDir="false" afterPath="$PROJECT_DIR$/meta/video/系统架构介绍.mov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meta/video/系统演示.mov" beforeDir="false" afterPath="$PROJECT_DIR$/meta/video/系统演示.mov" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,17 +60,18 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/chengpeng/IdeaProjects/klarity&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/chengpeng/IdeaProjects/klarity/meta/video&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/meta/video" />
       <recent name="$PROJECT_DIR$/meta/doc/image" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/meta/doc" />
       <recent name="$PROJECT_DIR$/assembly/klarity-deploy" />
     </key>
@@ -242,7 +246,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665971223915</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="init">
+      <created>1665974474307</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1665974474307</updated>
+    </task>
+    <task id="LOCAL-00011" summary="init">
+      <created>1666026117619</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1666026117619</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UnknownFeatures">
