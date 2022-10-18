@@ -8,6 +8,7 @@
 
 git仓库地址: https://github.com/422053362/klarity
 
+视频最好下载观看，原始视频比较清晰，在线视频比较模糊
 系统演示视频
 链接: https://pan.baidu.com/s/1hhqB-lgwvsBSa0LiO5AvOQ?pwd=1234
 提取码: 1234
